@@ -3,7 +3,6 @@ defined('BASEPATH') or exit('No direct script access allowed');
 date_default_timezone_set('UTC');
 class Users extends CI_Model
 {
-
 	public function insert($result)
 	{
 		$sql = "INSERT INTO `users`(`fio`, `address`, `login`, `password`, `email`, `phone`) VALUES (?, ?, ?, ?, ?, ?)";

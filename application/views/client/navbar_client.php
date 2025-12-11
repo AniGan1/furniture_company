@@ -18,9 +18,6 @@
                     <a class="nav-link" href="client/bascket">Корзина</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="clint/account">Личный кабинет</a>
-                </li>
-                <li class="nav-item">
                     <a class="nav-link" href="main/logout">Выйти</a>
                 </li>
             </ul>
