@@ -10,4 +10,11 @@ class Work_type extends CI_Model
         $res = $this->db->query($sql);
         return $res->result_array();
     }
+
+        public function select($id)
+    {
+        $sql = "SELECT * FROM work_type WHERE id = ?";
+        $res = $this->db->query($sql, array($id));
+        return $res->result_array();
+    }
 }
