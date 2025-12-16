@@ -1,7 +1,7 @@
 <div class="row">
     <div class="col-1"></div>
     <div class="col-10">
-        <h2>Закупка ьматериалов</h2>
+        <h2>Закупка материалов</h2>
         <table class="table">
             <thead>
                 <tr>

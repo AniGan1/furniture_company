@@ -1,7 +1,7 @@
 <div class="row">
     <div class="col-1"></div>
     <div class="col-10">
-        <form action="buchgalter/buy_material" class="ms-auto me-auto" style="width: 400px;">
+        <form action="" method="post" class="ms-auto me-auto" style="width: 400px;">
             <?php foreach ($material as $mat): ?>
                 <div class="mb-3">
                     <label for="">Наименование материала: <?= $mat['name'] ?></label>

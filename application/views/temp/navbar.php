@@ -10,9 +10,6 @@
                         <li class="nav-item">
                             <a class="nav-link" href="main/index">Главная</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="main/catalog">Каталог</a>
-                        </li>
                     </ul>
                     <ul class="navbar-nav mы-auto mb-2 mb-lg-0">
                         <li class="nav-item">

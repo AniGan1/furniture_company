@@ -5,21 +5,21 @@ class Material extends CI_Model
 {
 	public function selects()
 	{
-		$sql ="SELECT * FROM material ";
+		$sql = "SELECT * FROM material ";
 		$res = $this->db->query($sql);
-		return $res-> result_array();
+		return $res->result_array();
 	}
 
-		public function select($id)
+	public function select($id)
 	{
-		$sql ="SELECT * FROM material WHERE id = ?";
+		$sql = "SELECT * FROM material WHERE id = ?";
 		$res = $this->db->query($sql, array($id));
-		return $res-> result_array();
+		return $res->result_array();
 	}
-		public function buy($array)
+	public function upgrdae($array)
 	{
-		$sql ="UPDATE `material` SET `id`='[value-1]',`name`='[value-2]',`unit`='[value-3]',`stock_quantity`='[value-4]'";
-		$res = $this->db->query($sql, array($array['purchase_date'], $array['supplier_name'], $array['material_id'], $array['quantity'], $array['unit_price'] ));
+		$sql = "UPDATE `material` SET `stock_quantity`= ? WHERE id =  ?";
+		$res = $this->db->query($sql, array($array['quantity'], $array['id']));
 		return $res;
 	}
 }

@@ -16,7 +16,7 @@ class Main extends CI_Controller
 		}elseif($id_role == 2){
 			redirect();  //Переадресация для директора
 		}elseif($id_role == 3){
-			redirect('manager/buy');  //Переадресация для менеджера
+			redirect('meneger/meneg');  //Переадресация для менеджера
 		}elseif($id_role == 4){
 			redirect('buchgalter/buy');  //Переадресация для бухгалтера
 		}elseif($id_role == 5){

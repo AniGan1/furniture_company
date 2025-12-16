@@ -19,8 +19,12 @@ class Buchgalter extends CI_Controller
         $this->load->model('material');
         $result['material'] = $this->material->select($id_material);
         if (!empty($_POST)) {
-            $this->load->model('material');
-            $this->load->model('material_purchase');
+            $array = array(
+                'quantity' => $result['material'][0]['stock_quantity'] + $_POST['quantity'],
+                'id' => $id_material,
+            );
+            $this->material->upgrdae($array);
+            redirect('buchgalter/buy');
         } else {
             $this->load->view('temp/head');
             $this->load->view('buchgalter/navbar_buchgalter');
@@ -28,7 +32,6 @@ class Buchgalter extends CI_Controller
             $this->load->view('temp/footer');
         }
     }
-
     public function info()
     {
         $this->load->model('contract');
@@ -40,16 +43,20 @@ class Buchgalter extends CI_Controller
             $date1 = date('y-m-d');
             $date2 = date('y-m-d');
         }
-        $otchet = array(
-            'contract_date'=> $date1,
-            'deadline'=> $date2,
-        );
+
+
+        
         $result['workers'] = $this->users->get('Рабочий');
         $result['dones'] = $this->contract->get_done();
-        $result['otchets'] = $this->contract->otchet();
+        $result['otchets'] = $this->contract->otchet($_POST);
+        $result['dones_dates'] = array(
+            'date1' => $date1 ,
+            'date2' => $date2,
+        );
+
         $this->load->view('temp/head');
         $this->load->view('buchgalter/navbar_buchgalter');
-        $this->load->view('buchgalter/info', $otchet);
+        $this->load->view('buchgalter/info', $result);
         $this->load->view('temp/footer');
     }
 }

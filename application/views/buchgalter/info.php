@@ -3,7 +3,7 @@
     <div class="col-10">
         <h2>Сведения</h2>
 
-        <form action="buchgalter/info" class="ms-auto me-auto" style="width: 600px;">
+        <form action="buchgalter/info" method="post" class="ms-auto me-auto" style="width: 600px;">
             <h3>Сведения об объемах выполненных работ за период</h3>
             <div class="d-flex gap-3 align-content-center">
                 <div class="mb-2">
@@ -50,8 +50,8 @@
             </tbody>
         </table>
 
-        <form action="buchgalter/info" class="ms-auto me-auto" style="width: 500px;">
-            <h3>Сведения об объемах выполненных мастерами работ с_____ по _____</h3>
+        <form action="buchgalter/info" method="post" class="ms-auto me-auto" style="width: 500px;">
+            <h3>Сведения об объемах выполненных мастерами работ с <?=$dones_dates['date1']?> по <?=$dones_dates['date2']?></h3>
             <div class="d-flex gap-3 align-content-center">
                 <div class="mb-2">
                     <label for="">С:</label>

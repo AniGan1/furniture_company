@@ -22,7 +22,6 @@ class Contract extends CI_Model
 		$res = $this->db->query($sql, array($array['contract_date'], $array['client_id'], $array['planned_cost'], $array['planned_deadline'], $array['count'], $array['id_good']));
 		return $res;
 	}
-
 	public function get_done()
 	{
 		$sql = "SELECT * FROM users, Contract,contract_work WHERE  contract_work.contract_id = contract.id  and  users.id_user = contract_work.worker_id 
@@ -35,8 +34,8 @@ class Contract extends CI_Model
 		$sql = "SELECT * FROM users, Contract, Contract_work, goods, work_type WHERE contract_work.contract_id = contract.id 
 		AND  users.id_user = contract_work.worker_id
 		 AND contract_work.status = 'Выполнена' AND contract.id_good = goods.id_good AND 
-		 work_type.id = contract_work.work_type_id AND  Contract.contract_date > ? AND Contract.deadline  < ? ";
-		$res = $this->db->query($sql, array($otchet['contract_date'], $otchet['deadline']));
+		 work_type.id = contract_work.work_type_id AND Contract.contract_date = ? AND Contract_work.worker_id =?";
+		$res = $this->db->query($sql, array($otchet['date'], $otchet['id_user']));
 		return $res->result_array();
 	}
 
