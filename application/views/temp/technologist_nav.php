@@ -12,10 +12,16 @@
                 </li>
                 <?php }?>
                 <li class="nav-item">
-                    <a class="nav-link active text-light" aria-current="page" href="Technologist/distribution">Сведения</a>
+                    <a class="nav-link active text-light" aria-current="page" href="Technologist/distribution"> Сведения об объемах выполненных работ</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active text-light" aria-current="page" href="Technologist/material">Сведения</a>
+                    <a class="nav-link active text-light" aria-current="page" href="Technologist/material">Закупка материалов</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active text-light" aria-current="page" href="Technologist/worker">Назначить сотрудника</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active text-light" aria-current="page" href="Technologist/outstanding_works">Сведения о невыполненных работах</a>
                 </li>
                 <?php if (isset($_SESSION['id_user']) && $_SESSION['id_role'] == 6) {
                     echo'<div>

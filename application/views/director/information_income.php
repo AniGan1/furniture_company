@@ -27,7 +27,7 @@
     
       <?php foreach($contracts as $row){?>
         <tr>
-      <th scope="row"><?=$row['contract_number']?></th>
+      <th scope="row"><?=$row['id']?></th>
       <th scope="row"><?=$row['product_name']?></th>
       <th scope="row"><?=$row['fio']?></th>
       <th scope="row"><?=$row['deadline']?></th>

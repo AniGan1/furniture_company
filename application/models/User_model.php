@@ -11,5 +11,11 @@ class User_model extends CI_Model{
         $result = $this->db->query($sql,[$login, $password]);
         return $result->row_array();
     }
+
+    public function worker(){
+        $sql = 'select * from users where id_role = 5';
+        $result = $this->db->query($sql);
+        return $result->result_array();
+    }
 }
 ?>

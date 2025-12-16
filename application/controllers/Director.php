@@ -11,8 +11,7 @@ class Director extends CI_Controller{
     }
     
     public function information_income(){
-                $this->load->model('contract_model');
-
+        $this->load->model('contract_model');
         if (isset($_POST['sub'])) {
             $date_start = $_POST['date_start'];
             $date_end = $_POST['date_end'];
