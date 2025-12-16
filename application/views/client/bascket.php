@@ -21,9 +21,14 @@
                     <tr>
                         <td><?= $contract['id'] ?></td>
                         <td><?= $contract['contract_date'] ?></td>
+<<<<<<< HEAD
                         <td><?= $contract['deadline'] ?></td>
                         <td><?= $contract['done'] ?></td>
                         <td><?= $contract['id_good'] ?></td>
+=======
+                        <td></td>
+                        <td><?= $contract['work_type_id'] ?></td>
+>>>>>>> client
                         <td><?= $contract['count'] ?></td>
                         <td><?= $contract['total_price'] ?></td>
                         <td><?= $contract['status'] ?></td>
