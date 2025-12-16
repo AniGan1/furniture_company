@@ -22,7 +22,7 @@ class Main extends CI_Controller
 		}elseif($id_role == 5){
 			redirect('worker/index');  //Переадресация для рабочего
 		}elseif($id_role == 6){
-			redirect();  //Переадресация для мастера-технолога
+			redirect('technologist/distribution');  //Переадресация для мастера-технолога
 		}elseif($id_role == 8){
 			redirect('courier/index');//Переадресация для курьера
 		}else{
