@@ -14,7 +14,7 @@ class Main extends CI_Controller
 		if ($id_role == 1) {
 			$this->load->view('client/navbar_client');
 		}elseif($id_role == 2){
-			redirect();  //Переадресация для директора
+			redirect('director/information_work');  //Переадресация для директора
 		}elseif($id_role == 3){
 			redirect('meneger/meneg');  //Переадресация для менеджера
 		}elseif($id_role == 4){
