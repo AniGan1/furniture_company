@@ -9,11 +9,16 @@ class Users extends CI_Model
 		$res = $this->db->query($sql, array($result['fio'], $result['address'], $result['login'], $result['password'], $result['email'], $result['phone']));
 		return $res;
 	}
-
 	public function select($result)
 	{
-		$sql ="SELECT * FROM users WHERE login =? AND password = ?";
+		$sql = "SELECT * FROM users WHERE login =? AND password = ?";
 		$res = $this->db->query($sql, array($result['login'], $result['password']));
-		return $res-> result_array();
+		return $res->result_array();
+	}
+	public function get($title)
+	{
+		$sql = "SELECT * FROM users, roles WHERE roles.title = ? AND roles.id_role = users.id_role";
+		$res = $this->db->query($sql, array($title));
+		return $res->result_array();
 	}
 }
