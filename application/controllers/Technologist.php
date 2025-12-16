@@ -49,6 +49,7 @@ class Technologist extends CI_Controller{
         $data['types'] = $this->Work_type_model->types();
         $this->load->view('technologist/worker.php', $data);
         $this->load->view('temp/footer.php');
+        
     } 
 
     public function outstanding_works(){
